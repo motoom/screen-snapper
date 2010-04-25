@@ -91,7 +91,7 @@ void __fastcall TScreenSnapper::WndProc(TMessage &Msg)
 				Bm->Handle=Hb;
 
 				// Crop if necessary
-				Main->Crop(Bm,Main->MonitorCombo->ItemIndex);
+				Main->Crop(Bm,Main->MonitorCombo->ItemIndex); // 'The Parameter is incorrect, OutOfResources exception
 
 				/* Old crop code, didn't work very well for multi-monitor
 				if (Main->CropCheck->Checked) {
