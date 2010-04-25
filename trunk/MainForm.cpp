@@ -232,7 +232,7 @@ void __fastcall TMain::FillMonitorCombo(int Select)
 
 void TMain::Crop(Graphics::TBitmap *Src,int Monitor)
 {
-	if (Monitor==0) return; // 0=Entire desktop
+	if (Monitor<=0) return; // 0=Entire desktop
 	if (Screen->MonitorCount<1) return; // No monitors found
 
 	int DesktopW=GetSystemMetrics(SM_CXVIRTUALSCREEN),DesktopH=GetSystemMetrics(SM_CYVIRTUALSCREEN);
